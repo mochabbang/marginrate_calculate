@@ -100,3 +100,8 @@ a {
     color-scheme: dark;
   }
 }
+
+label {
+  font-weight: bold;
+  margin: 5px;
+}

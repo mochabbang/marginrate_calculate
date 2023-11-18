@@ -28,3 +28,28 @@
   border-radius: 5px;
   padding: 3rem;
 }
+
+/* Form Css */
+.form_container {
+  display: flex;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid #717171;
+  border-radius: 5px;
+}
+
+.form_input_full {
+  margin: 0px 5px;
+  border: 1px solid #b4b4b4;
+  width: 60%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form_input_mid {
+  margin: 0px 5px;
+  border: 1px solid #b4b4b4;
+  width: 25%;
+  padding: 10px;
+  border-radius: 5px;
+}

@@ -33,7 +33,7 @@ describe("margin_calculate make form", () => {
     expect(sell_price_input_element).toBeInTheDocument();
 
     const sell_transfer_price_input_element =
-      screen.getByPlaceholderText("배송비");
+      screen.getByTestId("sellTransferPrice");
     expect(sell_transfer_price_input_element).toBeInTheDocument();
   });
 
@@ -81,8 +81,58 @@ describe("margin_calculate make form", () => {
   it("exists charge_price tag", () => {
     render(<Form />);
 
-    const category_company_element =
-      screen.getByPlaceholderText("카테고리 수수료");
-    expect(category_company_element).toBeInTheDocument();
+    // 카테고리
+    const category_charge_price_element =
+      screen.getByPlaceholderText("카테고리");
+    expect(category_charge_price_element).toBeInTheDocument();
+
+    // 연동
+    const link_charge_price_element = screen.getByPlaceholderText("연동");
+    expect(link_charge_price_element).toBeInTheDocument();
+
+    // 배송비
+    const transfer_charge_price_element = screen.getByTestId(
+      "transferChargePrice",
+    );
+    expect(transfer_charge_price_element).toBeInTheDocument();
+
+    // 버튼들
+    const smartstore_button_element = screen.getByText("스마트스토어");
+    expect(smartstore_button_element).toBeInTheDocument();
+
+    const coupang_button_element = screen.getByText("쿠팡");
+    expect(coupang_button_element).toBeInTheDocument();
+
+    const gmarket_button_element = screen.getByText("G마켓");
+    expect(gmarket_button_element).toBeInTheDocument();
+
+    const elevenst_button_element = screen.getByText("11번가");
+    expect(elevenst_button_element).toBeInTheDocument();
+  });
+
+  it("exists tax_price tags", () => {
+    render(<Form />);
+
+    const tax_price_element = screen.getByPlaceholderText("부가세");
+    expect(tax_price_element).toBeInTheDocument();
+
+    const simple_taxer_element = screen.getByText("간이과세자");
+    expect(simple_taxer_element).toBeInTheDocument();
+
+    const general_taxer_element = screen.getByText("일반과세자");
+    expect(general_taxer_element).toBeInTheDocument();
+  });
+
+  it("exists execute buttons tag", () => {
+    render(<Form />);
+
+    const calculate_element = screen.getByText("계산하기");
+    expect(calculate_element).toBeInTheDocument();
+
+    const product_add_element = screen.getByText("상품추가");
+    expect(product_add_element).toBeInTheDocument();
+
+    const initialize_element = screen.getByText("초기화");
+    expect(initialize_element).toBeInTheDocument();
   });
 });
