@@ -31,7 +31,23 @@
 
 /* Form Css */
 .form_container {
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid #717171;
+  border-radius: 5px;
+}
+
+.form_flex_container {
   display: flex;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid #717171;
+  border-radius: 5px;
+}
+
+.form_grid_container {
+  display: grid;
+  grid-template-columns: auto;
   padding: 10px;
   margin: 10px 0px;
   border: 1px solid #717171;
@@ -41,7 +57,7 @@
 .form_input_full {
   margin: 0px 5px;
   border: 1px solid #b4b4b4;
-  width: 60%;
+  width: 95%;
   padding: 10px;
   border-radius: 5px;
 }
@@ -49,7 +65,76 @@
 .form_input_mid {
   margin: 0px 5px;
   border: 1px solid #b4b4b4;
-  width: 25%;
+  width: 35%;
   padding: 10px;
   border-radius: 5px;
+}
+
+.form_input_small {
+  margin: 0px 5px;
+  border: 1px solid #b4b4b4;
+  width: 20%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form_display {
+  background-color: #ececec;
+  min-width: 50%;
+  padding: 10px;
+  margin: 3px 5px;
+  border-radius: 5px;
+}
+
+.btn.blue {
+  background-color: #7fb1bf;
+}
+.btn.green {
+  background-color: #9abf7f;
+}
+.btn.red {
+  background-color: #fa5a5a;
+}
+.btn.purple {
+  background-color: #cb99c5;
+}
+.btn.cyan {
+  background-color: #7fccde;
+}
+.btn.yellow {
+  background-color: #f0d264;
+}
+.btn.grey {
+  background-color: #b4b4b4;
+}
+
+.btn_rounded {
+  position: relative;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  min-width: 50px;
+  min-height: 30px;
+  margin: 3px;
+}
+
+.btn_rounded_full {
+  position: relative;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  width: 25%;
+  min-height: 30px;
+  margin: 3px;
+}
+
+.form_button_container {
+  display: flex;
+  justify-content: center;
 }
