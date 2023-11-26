@@ -11,7 +11,7 @@
 }
 
 .calculate_background {
-  width: 100%;
+  /* width: 100%; */
   margin: 2rem;
   background-color: #ececec;
   border-radius: 5px;
@@ -22,7 +22,7 @@
 }
 
 .calculate_background_item {
-  width: 98%;
+  /* width: 98%; */
   margin: 0.25rem;
   background-color: white;
   border-radius: 5px;
@@ -55,25 +55,25 @@
 }
 
 .form_input_full {
-  margin: 0px 5px;
+  margin: 5px;
   border: 1px solid #b4b4b4;
-  width: 95%;
+  width: 98%;
   padding: 10px;
   border-radius: 5px;
 }
 
 .form_input_mid {
-  margin: 0px 5px;
+  margin: 5px;
   border: 1px solid #b4b4b4;
-  width: 35%;
+  width: 43%;
   padding: 10px;
   border-radius: 5px;
 }
 
 .form_input_small {
-  margin: 0px 5px;
+  margin: 5px;
   border: 1px solid #b4b4b4;
-  width: 20%;
+  width: 29%;
   padding: 10px;
   border-radius: 5px;
 }
@@ -84,6 +84,7 @@
   padding: 10px;
   margin: 3px 5px;
   border-radius: 5px;
+  height: 40px;
 }
 
 .btn.blue {
@@ -118,7 +119,7 @@
   border-radius: 5px;
   min-width: 50px;
   min-height: 30px;
-  margin: 3px;
+  margin: 0px 3px;
 }
 
 .btn_rounded_full {

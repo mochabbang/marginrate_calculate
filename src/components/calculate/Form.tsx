@@ -1,6 +1,14 @@
+"use client";
 import styles from "@/app/page.module.css";
+import useInput from "@/utils/lib/useInput";
 
 const Form = () => {
+  const initialState = {
+    productnm: "",
+  };
+
+  const [state, onChange] = useInput(initialState);
+
   return (
     <>
       <div className={styles.form_grid_container}>
@@ -14,9 +22,10 @@ const Form = () => {
             name="productnm"
             placeholder="상품을 입력하세요."
             className={styles.form_input_full}
+            onChange={(e) => onChange(e)}
           />
         </div>
-        <p className={styles.form_display}>Display Tag</p>
+        <p className={styles.form_display}>{state.productnm}</p>
       </div>
       <div className={styles.form_grid_container}>
         <div>

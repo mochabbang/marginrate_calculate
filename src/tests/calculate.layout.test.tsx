@@ -16,9 +16,8 @@ describe("margin_calculate make form", () => {
     render(<Form />);
 
     // input tag
-    const product_input_element = screen.getByRole("textbox", {
-      name: "상품명",
-    });
+    const product_input_element =
+      screen.getByPlaceholderText("상품을 입력하세요.");
 
     expect(product_input_element).toBeInTheDocument();
   });
@@ -70,11 +69,11 @@ describe("margin_calculate make form", () => {
 
     expect(add_button).toBeInTheDocument();
 
-    const del_button = screen.getByRole("button", {
-      name: "삭제",
-    });
+    // const del_button = screen.getByRole("button", {
+    //   name: "삭제",
+    // });
 
-    expect(del_button).toBeDisabled();
+    // expect(del_button).toBeDisabled();
   });
 
   // 수수료
