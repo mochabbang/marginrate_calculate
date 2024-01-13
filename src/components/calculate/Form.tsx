@@ -1,13 +1,30 @@
 "use client";
 import styles from "@/app/page.module.css";
-import useInput from "@/utils/lib/useInput";
+import useInput from "@/utils/lib/hooks/useInput";
 
 const Form = () => {
   const initialState = {
     productnm: "",
+    sellprice: 0,
+    sellTransferPrice: 0,
+    buyPrice: 0,
+    buyTransferPrice: 0,
+    etcTarget: "",
+    etcPrice: 0,
+    categoryChargePrice: 0,
+    linkChargePrice: 0,
+    transferChargePrice: 0,
+    taxPrice: 0,
   };
 
   const [state, onChange] = useInput(initialState);
+  const {
+    productnm,
+    sellprice,
+    sellTransferPrice,
+    buyPrice,
+    buyTransferPrice,
+  } = state;
 
   return (
     <>
@@ -25,7 +42,9 @@ const Form = () => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <p className={styles.form_display}>{state.productnm}</p>
+        <p className={styles.form_display}>
+          {!productnm ? "상품을 입력하세요." : productnm}
+        </p>
       </div>
       <div className={styles.form_grid_container}>
         <div>
@@ -39,6 +58,7 @@ const Form = () => {
             min={0}
             placeholder="상품 판매 금액"
             className={styles.form_input_mid}
+            onChange={(e) => onChange(e)}
           />
           <input
             type="number"
@@ -48,9 +68,13 @@ const Form = () => {
             placeholder="배송비"
             className={styles.form_input_mid}
             data-testid="sellTransferPrice"
+            onChange={(e) => onChange(e)}
           />
         </div>
-        <p className={styles.form_display}>Display Tag</p>
+        <p className={styles.form_grid_display}>
+          <span>판매금액 {sellprice}</span>
+          <span>배송비 {sellTransferPrice}</span>
+        </p>
       </div>
       <div className={styles.form_grid_container}>
         <div>
@@ -64,6 +88,7 @@ const Form = () => {
             min={0}
             placeholder="상품 매입 금액"
             className={styles.form_input_mid}
+            onChange={(e) => onChange(e)}
           />
           <input
             type="number"
@@ -72,9 +97,13 @@ const Form = () => {
             min={0}
             placeholder="매입 배송비"
             className={styles.form_input_mid}
+            onChange={(e) => onChange(e)}
           />
         </div>
-        <p className={styles.form_display}>Display Tag</p>
+        <p className={styles.form_grid_display}>
+          <span>매입금액 {buyPrice}</span>
+          <span>배송비 {buyTransferPrice}</span>
+        </p>
       </div>
       <div className={styles.form_grid_container}>
         <div>
@@ -88,6 +117,7 @@ const Form = () => {
               name="etcTarget"
               placeholder="기타 비용 대상"
               className={styles.form_input_mid}
+              onChange={(e) => onChange(e)}
             />
             <input
               type="number"
@@ -96,6 +126,7 @@ const Form = () => {
               min={0}
               placeholder="비용"
               className={styles.form_input_mid}
+              onChange={(e) => onChange(e)}
             />
             <button
               className={`${styles.btn_rounded} ${styles.btn} ${styles.blue}`}
@@ -120,6 +151,7 @@ const Form = () => {
               name="categorychargeprice"
               placeholder="카테고리"
               className={styles.form_input_small}
+              onChange={(e) => onChange(e)}
             />
             <input
               type="number"
@@ -128,6 +160,7 @@ const Form = () => {
               name="linkChargePrice"
               placeholder="연동"
               className={styles.form_input_small}
+              onChange={(e) => onChange(e)}
             />
             <input
               type="number"
@@ -137,6 +170,7 @@ const Form = () => {
               placeholder="배송비"
               className={styles.form_input_small}
               data-testid="transferChargePrice"
+              onChange={(e) => onChange(e)}
             />
           </div>
           <div style={{ margin: "7px 5px" }}>
@@ -177,6 +211,7 @@ const Form = () => {
               name="taxPrice"
               placeholder="부가세"
               className={styles.form_input_full}
+              onChange={(e) => onChange(e)}
             />
           </div>
           <div style={{ margin: "7px 5px" }}>

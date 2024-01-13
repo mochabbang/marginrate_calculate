@@ -1,4 +1,4 @@
-import useInput from "@/utils/lib/useInput";
+import useInput from "@/utils/lib/hooks/useInput";
 import { act, renderHook } from "@testing-library/react";
 
 test("useInput Custom Hook change product state", () => {
