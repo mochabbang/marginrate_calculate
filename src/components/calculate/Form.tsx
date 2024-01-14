@@ -1,6 +1,7 @@
 "use client";
 import styles from "@/app/page.module.css";
 import useInput from "@/utils/lib/hooks/useInput";
+import "@/utils/lib/strings";
 
 const Form = () => {
   const initialState = {
@@ -72,8 +73,8 @@ const Form = () => {
           />
         </div>
         <p className={styles.form_grid_display}>
-          <span>판매금액 {sellprice}</span>
-          <span>배송비 {sellTransferPrice}</span>
+          <span>판매금액 {sellprice.toString().toNumberComma()}</span>
+          <span>배송비 {sellTransferPrice.toString().toNumberComma()}</span>
         </p>
       </div>
       <div className={styles.form_grid_container}>
@@ -101,8 +102,8 @@ const Form = () => {
           />
         </div>
         <p className={styles.form_grid_display}>
-          <span>매입금액 {buyPrice}</span>
-          <span>배송비 {buyTransferPrice}</span>
+          <span>매입금액 {buyPrice.toString().toNumberComma()}</span>
+          <span>배송비 {buyTransferPrice.toString().toNumberComma()}</span>
         </p>
       </div>
       <div className={styles.form_grid_container}>

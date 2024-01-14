@@ -17,9 +17,7 @@ String.prototype.isNullOrEmpty = function () {
 };
 
 String.prototype.toNumberComma = function () {
-  if (arguments[0] === undefined) {
-    return this.toString();
-  } else {
-    return arguments[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  return !this.isNullOrEmpty()
+    ? this.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    : "undefined";
 };

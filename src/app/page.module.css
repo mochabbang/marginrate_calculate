@@ -89,7 +89,7 @@
 
 .form_grid_display {
   display: grid;
-  grid-template-columns: 250px 250px;
+  grid-template-columns: 150px 150px;
   background-color: #ececec;
   min-width: 50%;
   padding: 10px;
